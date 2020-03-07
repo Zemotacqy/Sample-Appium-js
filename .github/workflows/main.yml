@@ -7,7 +7,7 @@ jobs:
         steps:
         - name: Appium Test step
           id: Appium
-          uses: Zemotacqy/Appium-js@v1
+          uses: Zemotacqy/Appium-js@v1.1
           env: 
             bs_username: ${{ secrets.bs_username }}
             bs_accesskey: ${{ secrets.bs_accesskey }}  
