@@ -2,12 +2,12 @@ on: [push]
 
 jobs:
     appium_job:
-        runs-on: self-hosted
+        runs-on: ubuntu-latest
         name: Run Appium Test
         steps:
         - name: Appium Test step
           id: Appium
-          uses: Zemotacqy/Appium-js@v1.6
+          uses: Zemotacqy/Appium-js@v1.7
           env: 
             bs_username: ${{ secrets.BS_USERNAME }}
             bs_accesskey: ${{ secrets.BS_ACCESSKEY }}  
