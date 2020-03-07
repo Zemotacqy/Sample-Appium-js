@@ -7,8 +7,7 @@ jobs:
         steps:
         - name: Appium Test step
           id: Appium
-          uses: Zemotacqy/Appium-js@v1.2
+          uses: Zemotacqy/Appium-js@v1.3
           env: 
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            BS_USERNAME: ${{ secrets.BS_USERNAME }}
-            BS_ACCESSKEY: ${{ secrets.BS_ACCESSKEY }}  
+            bs_username: ${{ secrets.BS_USERNAME }}
+            bs_accesskey: ${{ secrets.BS_ACCESSKEY }}  
