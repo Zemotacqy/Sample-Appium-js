@@ -4,11 +4,12 @@ var asserters = wd.asserters;
 
 var username = '<BSTACK_USERNAME>'
 var access_key = '<BSTACK_ACCESS_KEY>'
+var app_url = '<APP_HASHED_ID>'
 
 desiredCaps = {
   'browserstack.user' : username,
   'browserstack.key' : access_key,
-  'app' : '<APP_HASHED_ID>',
+  'app' : app_url,
   'build' : 'Node Android',
   'name': 'single_test',
   'device' : 'Google Pixel',
