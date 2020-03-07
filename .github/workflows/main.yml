@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+    appium_job:
+        runs_on: ubuntu-latest
+        name: Run Appium Test
+        steps:
+        - name: Appium Test step
+          id: Appium
+          uses: Zemotacqy/Appium-js
+          with: 
+            bs_username: ${{ secrets.bs_username }}
+            bs_accesskey: ${{ secrets.bs_accesskey }}  
