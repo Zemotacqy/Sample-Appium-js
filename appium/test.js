@@ -2,9 +2,9 @@ var wd = require('wd');
 var assert = require('assert');
 var asserters = wd.asserters;
 
-var username = '<BSTACK_USERNAME>'
-var access_key = '<BSTACK_ACCESS_KEY>'
-var app_url = 'bs://<APP_HASHED_ID>'
+var username = 'zemotacqy1'
+var access_key = 'KfSLAHBWQMprkcokaqYU'
+var app_url = 'bs://afb9b4c8f746f5cf3bdba0b79740111d2101a221'
 
 desiredCaps = {
   'browserstack.user' : username,
@@ -12,7 +12,7 @@ desiredCaps = {
   'app' : app_url,
   "project" : "Appium-js-GitHub-Action",
   'build' : 'Node Android',
-  'name': 'single_test',
+  'name': `${new Date().toLocaleString()}`,
   'device' : 'Google Pixel',
   'browserstack.debug' : true
 };
@@ -21,17 +21,23 @@ driver = wd.promiseRemote("http://hub-cloud.browserstack.com/wd/hub");
 driver
   .init(desiredCaps)
   .then(function () {
-    return driver.waitForElementById("com.example.myapplication:id/command_text", asserters.isDisplayed && asserters.isEnabled, 30000);
+    return driver.elementById('command_text');
   })
   .then(function (searchInput) {
+    console.log(searchInput);
     return searchInput.sendKeys("pwd");
   })
   .then(function () {
-    var element = driver.waitForElementById("com.example.myapplication:id/command_text", asserters.isDisplayed && asserters.isEnabled, 30000);
-    return element.getText();
+    return driver.elementById('send_button');
   })
-  .then(function (search_results) {
-    assert(search_results.length > 0);
+  .then(function (clickElement) {
+      console.log(clickElement);
+    return clickElement.click();
+  })
+  .then(function () {
+    setTimeout(() => {
+        return driver.elementsByClassName('android.widget.TextView');
+    }, 40000);
   })
   .fin(function() { return driver.quit(); })
   .done();
