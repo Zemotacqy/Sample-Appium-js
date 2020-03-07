@@ -10,6 +10,7 @@ desiredCaps = {
   'browserstack.user' : username,
   'browserstack.key' : access_key,
   'app' : app_url,
+  "project" : "Appium-js-GitHub-Action",
   'build' : 'Node Android',
   'name': 'single_test',
   'device' : 'Google Pixel',
