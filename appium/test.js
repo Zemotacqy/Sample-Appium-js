@@ -2,9 +2,9 @@ var wd = require('wd');
 var assert = require('assert');
 var asserters = wd.asserters;
 
-var username = 'zemotacqy1'
-var access_key = 'KfSLAHBWQMprkcokaqYU'
-var app_url = 'bs://afb9b4c8f746f5cf3bdba0b79740111d2101a221'
+var username = <BROWSERSTACK_USERNAME>
+var access_key = <BROWSERSTACK_ACCESSKEY>
+var app_url = <APP_URL>
 
 desiredCaps = {
   'browserstack.user' : username,
