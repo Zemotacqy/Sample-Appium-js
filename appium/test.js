@@ -7,9 +7,9 @@ var access_key = <BSTACK_ACCESS_KEY>
 var app_url = <APP_HASHED_ID>
 
 desiredCaps = {
-  'browserstack.user' : username,
-  'browserstack.key' : access_key,
-  'app' : app_url,
+  'browserstack.user' : `${username}`,
+  'browserstack.key' : `${access_key}`,
+  'app' : `${app_url}`,
   "project" : "Appium-js-GitHub-Action",
   'build' : 'Node Android',
   'name': `${new Date().toLocaleString()}`,
