@@ -17,7 +17,7 @@ desiredCaps = {
   'browserstack.debug' : true
 };
 
-console.log(app_url);
+console.log("hello world");
 
 driver = wd.promiseRemote("http://hub-cloud.browserstack.com/wd/hub");
  
